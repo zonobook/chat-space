@@ -47,7 +47,7 @@ Things you may want to cover:
 
 * ...
 
-##usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
@@ -59,8 +59,8 @@ Things you may want to cover:
 - has_many :groups, through: :members
 - has_many :messages
 
-##groupsテーブル
-Column|Type|Options|
+## groupsテーブル
+|Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
 |name|integer|null: false|
@@ -69,7 +69,7 @@ Column|Type|Options|
 - has_many :users, through: :members
 - has_many :messages
 
-##membersテーブル
+## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -79,7 +79,7 @@ Column|Type|Options|
 - belongs_to :group
 - belongs_to :user
 
-##messagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
