@@ -1,7 +1,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :groups, through: :members
@@ -11,7 +11,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: :members
@@ -21,8 +21,8 @@
 ## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|foreign_key: true|
-|group_id|referencesforeign_key: true|
+|user|references|foreign_key: true|
+|group|references|foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -31,10 +31,10 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|integer|null: false|
-|image|integer|null: true|
-|user_id|references|foreign_key: true|
-|group_id|references|foreign_key: true|
+|text|text|null: false|
+|image|text|null: true|
+|user|references|foreign_key: true|
+|group|references|foreign_key: true|
 
 ### Association
 - belongs_to :group
