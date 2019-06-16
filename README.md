@@ -32,7 +32,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|image|text|null: true|
+|image|string|null: true|
 |user|references|foreign_key: true|
 |group|references|foreign_key: true|
 
