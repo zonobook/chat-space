@@ -6,11 +6,11 @@
   text-align: center;
   width: 100vw;
 }
-.left{
+.sidebar{
   width: 300px;
   float: left;
   height: 100vh;
-  .leftup {
+  .account {
     background-color: #253541;
     padding:0 20px;
     height: 100px;
@@ -32,7 +32,7 @@
       margin-left: 0.3rem;
     }
   }
-  .leftdown {
+  .groups {
     background-color: #2f3e51;
     padding:20px 20px 0;
     height: calc(100vh - 100px);
@@ -41,7 +41,7 @@
       font-weight:  bold;
       color: #FFFFFF;
     }
-    &__newcomment{
+    &__message{
       margin-top: 5px;
       margin-bottom: 40px;
       font-size: 11px;
@@ -51,11 +51,11 @@
   }
 }
 
-.right{
+.contents{
   width: calc(100vw - 300px);
   float: right;
   height: 100vh;
-  .rightup{
+  .title{
     padding:0 40px;
     height: 100px;
     display: flex;
@@ -78,17 +78,19 @@
       line-height: 40px;
       padding:0 20px;
       border: solid 1px #38aef0;
+      color: #38aef0;
+      text-decoration: none;
       position: absolute;
       right: 40px;
     }
   }
-  .rightdown {
+  .list {
     border-top-color: #eeeeee;
     background-color: #fafafa;
     padding:46px 40px 0;
     height: calc(100vh - 125px);
     position: relative;
-    &__username{
+    &__name{
       display: inline-block; 
       font-size: 16px;
       font-weight:  bold;
@@ -99,7 +101,7 @@
       margin-right: 10px;
       font-size: 12px;
     }
-    &__comment{
+    &__message{
       margin-top: 10px;
       margin-bottom: 40px;
       font-size: 14px;
