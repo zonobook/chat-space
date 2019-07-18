@@ -1,0 +1,36 @@
+.notification グループを作成しました
+.chat
+  .sidebar
+    .account
+      %h3.account__user test-user
+      %ul.account__icons
+        %li.account__newgroup
+          %i.fa.fa-edit
+        %li.account__editaccount
+          %i.fa.fa-cog
+    .groups
+      %h4.groups__test test
+      %h5.groups__message さようなら
+      %h4.groups__test sample-group
+      %h5.groups__message hello
+      %h4.groups__test example
+      %h5.groups__message まだメッセージがありません
+  .contents
+    .title
+      %h4.title__group test-group
+      %h5.title__member test-member
+      %a.title__edit{href: "#"} Edit
+    .list
+      %h4.list__name test-user
+      %h4.list__date 2019/2/13(WED)
+      %h5.list__message こんにちは
+      %h4.list__name test-user
+      %h4.list__date 2019/2/13(WED)
+      %h5.list__message さようなら
+      %form.list__form
+        .list__form__messages
+          %input.list__form__newmessage{placeholder: "type a message", type: "text"}/
+          %label.list__form__image
+            %i.fa.fa-image
+            %input#message_image.list__form__file{name: "message[image]", type: "file"}/
+        %input.list__form__submit{data: {disable: { with: "Send" }}, name: "commit", type: "submit", value: "Send"}/
