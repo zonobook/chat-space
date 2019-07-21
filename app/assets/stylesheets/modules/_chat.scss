@@ -89,12 +89,12 @@
         padding-left: 10px;
       }
       &__mask {
-        background-color: $white;
+        background-color: transparent;
         float: left;
         height: 50px;
         padding-right: 10px;
         position: absolute;
-        right: 150px;
+        right: 170px;
         &__image {
           font-size: 20px;
           line-height: 50px;
