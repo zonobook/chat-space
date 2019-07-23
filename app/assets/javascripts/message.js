@@ -13,7 +13,7 @@ $(function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                    <p class="lower-message__content" if message.content.present?>
+                    <p class="lower-message__content">
                     ${message.content}
                     </p>
                     ${img}
