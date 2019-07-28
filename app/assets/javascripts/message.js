@@ -1,5 +1,6 @@
 $(function(){
   function buildHTML(message){
+    var content = message.content ? `<p class="lower-message__content">${message.content}</p>` :"";
     var img = message.image ? `<img src="${message.image}">` : "";
     var html = `<div class="message" data-id = "${message.id}">
                   <div class="upper-message">
@@ -11,9 +12,7 @@ $(function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                    <p class="lower-message__content">
-                    ${message.content}
-                    </p>
+                    ${content}
                     ${img}
                   </div>
                 </div>`
@@ -54,7 +53,11 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      var insertHTML = '';
+      messages.forEach(function(message){
+        insertHTML = buildHTML(message)
+        $('.messages').append(html)
+      })
     })
     .fail(function() {
       console.log('error');
