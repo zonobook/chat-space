@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
-    var content = message.content ? `<p class="lower-message__content">${message.content}</p>` :"";
     var img = message.image ? `<img class="lower-message__image" src="${message.image}">` : "";
     var html = `<div class="message" data-id = "${message.id}">
                   <div class="upper-message">
@@ -12,7 +11,7 @@ $(document).on('turbolinks:load', function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                    ${content}
+                    <p class="lower-message__content">${message.content}</p>
                     ${img}
                   </div>
                 </div>`
